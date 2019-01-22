@@ -1,7 +1,7 @@
 Page({
   data: {
     orientation:'right', //滚动方向
-    moveDistance:0,//初始滚动距离
+    moveDistance:0,//距离屏幕边缘距离
     movePace:0.1, //滚动速度
     size:30,
     text:'可以滚动',
@@ -25,7 +25,7 @@ Page({
     var moveInterval=setInterval(function(){
       if (-that.data.moveDistance < that.data.moveLength){
         that.setData({
-          moveDistance: that.data.moveDistance-that.data.movePace,
+          moveDistance: that.data.moveDistance-that.data.movePace, //更新距离屏幕边缘距离
         })
       }
       else{
