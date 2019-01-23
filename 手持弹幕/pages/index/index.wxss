@@ -1,0 +1,62 @@
+.container{
+  margin-right:30rpx;
+  margin-top:30rpx;
+  margin-left:30rpx;
+}
+
+.bulletScreen{
+  height:400rpx;
+  border-radius: 15rpx;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.controlPanel{
+  margin-top:40rpx;
+  display:flex;
+  flex-direction:row;
+  padding:30rpx;
+}
+
+.onLeft{
+  display:flex;
+  flex-direction:column;
+}
+
+.leftUp{
+  display:flex;
+  flex-direction:row;
+}
+
+.input{
+  background-color:#FFFFFF;
+  font-size:30rpx;
+  margin-left:20rpx;
+}
+
+.leftdown{
+  margin-top:20rpx;
+  display:flex;
+  flex-direction:row;
+}
+
+.speedControl{
+ display:flex;
+ flex-direction: column;
+}
+
+.onRight{
+  flex:1
+}
+
+radio.wx-radio-input{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx;
+   height: 40rpx;
+}
+
+radio.wx-radio-input.wx-radio-input-checked{
+   border: none;
+   background: red;
+}

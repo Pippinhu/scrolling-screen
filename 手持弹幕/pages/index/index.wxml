@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class="bulletScreen" style="background-color:{{color}}">
+    <text style="color:white;font-size:100rpx;">{{text}}</text>
+  </view>
+  <view class="controlPanel">
+    <view clas="onLeft">
+      <view class="leftUp">
+        <label style="font-size:30rpx;color:#D4D4D4">内容</label>
+        <input class="input"value="{{text}}"maxlength="20"></input>
+      </view>
+      <view class="leftdown">
+        <text style="font-size:30rpx;color:#D4D4D4">底色</text>
+      </view>
+    </view>
+    <view clas="onRight">
+      <radio-group class="speedControl" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />
+          {{item.value}}
+        </label>
+      </radio-group>
+    </view>
+  </view>
+</view>
