@@ -1,7 +1,6 @@
-# 手持弹幕
+# Bullet Screen
 
-1. 滚屏功能
-2. 调节速度/文字/颜色
+1. Bullet Screen
+3. Self-defined <Radio> Component
 
-# 开发日志
-1月28日：实现了radio默认样式修改大幅度修改
+# Log
