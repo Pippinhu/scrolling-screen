@@ -1,22 +1,31 @@
 <view class='container'>
-  <view class="bulletScreen" style="background-color:{{color}}">
-    <text style="color:white;font-size:100rpx;">{{text}}</text>
+  <view class="bulletScreen"style="background-color:{{color}}">
+      <view class="text" style="{{orientation}}:{{moveDistance}}px;">
+        <text style="color:white;font-size:{{size}}px;">{{text}}</text>
+      </view>
   </view>
   <view class="controlPanel">
     <view clas="onLeft">
       <view class="leftUp">
-        <label style="font-size:30rpx;color:#D4D4D4">内容</label>
+        <label style="font-size:30rpx;color:#C9C9C9">内容</label>
         <input class="input"value="{{text}}"maxlength="20"></input>
       </view>
       <view class="leftdown">
-        <text style="font-size:30rpx;color:#D4D4D4">底色</text>
+        <text style="font-size:30rpx;color:#C9C9C9">底色</text>
+        <radio-group class="choice"bindchange="radioColorChange">
+          <radio class="radio-color" border-color='transparent'color='transparent'style=
+            "background-color:{{item.value}}"wx:for-items="{{colors}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+          </radio>
+        </radio-group>
       </view>
     </view>
     <view clas="onRight">
-      <radio-group class="speedControl" bindchange="radioChange">
-        <label class="radio" wx:for="{{items}}">
-          <radio value="{{item.name}}" checked="{{item.checked}}" />
-          {{item.value}}
+      <radio-group class="radio-group" bindchange="radioChange">
+         <label class="radio-speed {{item.checked ? 'active' : ''}}" wx:for="{{items}}">
+            <view class="radio-list">
+              <view class="radio-icon"></view>
+              <radio value="{{item.value}}" checked="{{item.checked}}"/><text class="tag">{{item.name}}</text>
+          </view>
         </label>
       </radio-group>
     </view>
